@@ -1,69 +1,1315 @@
 import Image from "next/image";
 
+const projects = [
+  {
+    number: "01",
+    title: "Sistema de Manuais",
+    company: "JCortiça / Artabas",
+
+    description:
+      "Plataforma empresarial desenvolvida para centralizar, organizar e disponibilizar manuais e projetos técnicos de painéis elétricos.",
+
+    tags: [
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "JWT",
+      "Cloudflare R2",
+    ],
+
+    image: "/sistema-manuais.png",
+
+    url: "https://projeto-jc-gamma.vercel.app/",
+
+    status: "online",
+  },
+
+  {
+    number: "02",
+    title: "Sistema de Relatórios",
+    company: "JCortiça",
+
+    description:
+      "Sistema desenvolvido para digitalizar e organizar processos internos de relatórios, reduzindo a dependência de controles manuais e centralizando informações.",
+
+    tags: ["Next.js", "Node.js", "PostgreSQL", "REST API"],
+
+    image: null,
+    url: null,
+
+    status: "development",
+  },
+
+  {
+    number: "03",
+    title: "FIPPConsórcio",
+    company: "Projeto acadêmico",
+
+    description:
+      "Sistema completo para gerenciamento de consórcios, participantes, cotas, pagamentos, assembleias e controle financeiro.",
+
+    tags: [
+      "Next.js",
+      "Node.js",
+      "MySQL",
+      "JWT",
+      "Socket.io",
+      "Swagger",
+    ],
+
+    image: null,
+    url: null,
+
+    status: "development",
+  },
+];
+
+const otherProjects = [
+  {
+    title: "Oficina Mecânica",
+    stack: "Node.js • Express • EJS • MySQL",
+  },
+
+  {
+    title: "E-commerce",
+    stack: "Node.js • Express • EJS • MySQL",
+  },
+
+  {
+    title: "PDV Supermercado",
+    stack: "Next.js • API REST",
+  },
+
+  {
+    title: "Imobiliária",
+    stack: "Next.js • React • API REST",
+  },
+];
+
+const technologies = {
+  Frontend: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+  ],
+
+  Backend: [
+    "Node.js",
+    "Express",
+    "REST API",
+    "JWT",
+    "Swagger",
+    "Socket.io",
+  ],
+
+  "Banco de Dados": [
+    "MySQL",
+    "PostgreSQL",
+    "Oracle",
+    "SQL",
+  ],
+
+  Ferramentas: [
+    "Git",
+    "GitHub",
+    "Docker",
+    "Vercel",
+    "Render",
+    "Cloudflare R2",
+  ],
+
+  Outros: [
+    "C#",
+    ".NET",
+    "Python",
+    "C",
+  ],
+};
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+
+      {/* ==================================================
+          NAVBAR
+      ================================================== */}
+
+      <nav className="navbar">
+
+        <a
+          href="#home"
+          className="logo"
+          data-cursor="HOME"
+        >
+          &lt;EW<span>/</span>&gt;
+        </a>
+
+        <div className="navLinks">
+
+          <a
+            href="#about"
+            data-cursor="ABOUT"
+          >
+            Sobre
+          </a>
+
+          <a
+            href="#projects"
+            data-cursor="WORK"
+          >
+            Projetos
+          </a>
+
+          <a
+            href="#experience"
+            data-cursor="CAREER"
+          >
+            Experiência
+          </a>
+
+          <a
+            href="#stack"
+            data-cursor="STACK"
+          >
+            Stack
+          </a>
+
+        </div>
+
+        <a
+          href="#contact"
+          className="navContact"
+          data-cursor="TALK"
+        >
+          Vamos conversar <span>↗</span>
+        </a>
+
+      </nav>
+
+
+      {/* ==================================================
+          HERO
+      ================================================== */}
+
+      <section
+        className="hero"
+        id="home"
+      >
+
+        <div className="heroGlow heroGlowOne" />
+        <div className="heroGlow heroGlowTwo" />
+
+        <div className="heroStatus">
+
+          <span className="statusDot" />
+
+          Disponível para oportunidades
+
+        </div>
+
+
+        <div className="heroContent">
+
+          <p className="eyebrow">
+            FULL STACK DEVELOPER • BASTOS, SP
           </p>
+
+          <h1>
+            EDWYN
+            <br />
+            <span>WYLLY.</span>
+          </h1>
+
+
+          <div className="heroBottom">
+
+            <p>
+              Transformando{" "}
+              <strong>
+                problemas reais
+              </strong>{" "}
+              em experiências digitais e sistemas
+              que geram resultado.
+            </p>
+
+
+            <div className="heroButtons">
+
+              <a
+                href="#projects"
+                className="primaryButton"
+                data-cursor="EXPLORE"
+              >
+                Ver projetos <span>↓</span>
+              </a>
+
+
+              <a
+                href="https://github.com/EdwynWs"
+                target="_blank"
+                rel="noreferrer"
+                className="secondaryButton"
+                data-cursor="CODE ↗"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+
+        {/* CARD DE CÓDIGO */}
+
+        <div className="codeCard">
+
+          <div className="codeHeader">
+
+            <div className="windowDots">
+              <span />
+              <span />
+              <span />
+            </div>
+
+            <small>
+              developer.ts
+            </small>
+
+          </div>
+
+
+          <pre>
+
+            <span className="codePurple">
+              const
+            </span>{" "}
+
+            <span className="codeBlue">
+              developer
+            </span>{" "}
+
+            = {"{"}
+
+            {"\n"}  name:{" "}
+
+            <span className="codeGreen">
+              &quot;Edwyn Wylly&quot;
+            </span>,
+
+            {"\n"}  role:{" "}
+
+            <span className="codeGreen">
+              &quot;Full Stack Developer&quot;
+            </span>,
+
+            {"\n"}  stack: [
+
+            {"\n"}    <span className="codeGreen">
+              &quot;Next.js&quot;
+            </span>,
+
+            {"\n"}    <span className="codeGreen">
+              &quot;React&quot;
+            </span>,
+
+            {"\n"}    <span className="codeGreen">
+              &quot;Node.js&quot;
+            </span>,
+
+            {"\n"}    <span className="codeGreen">
+              &quot;SQL&quot;
+            </span>
+
+            {"\n"}  ],
+
+            {"\n"}  building:{" "}
+
+            <span className="codePurple">
+              true
+            </span>
+
+            {"\n"}
+
+            {"}"};
+
+          </pre>
+
         </div>
-      </main>
-    </div>
+
+
+        <div className="scrollIndicator">
+
+          <span>
+            SCROLL
+          </span>
+
+          <div />
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          TECH TICKER
+      ================================================== */}
+
+      <div className="ticker">
+
+        <div>
+
+          NEXT.JS <span>✦</span>
+
+          REACT <span>✦</span>
+
+          NODE.JS <span>✦</span>
+
+          TYPESCRIPT <span>✦</span>
+
+          MYSQL <span>✦</span>
+
+          POSTGRESQL <span>✦</span>
+
+          REST API <span>✦</span>
+
+          DOCKER <span>✦</span>
+
+          NEXT.JS <span>✦</span>
+
+          REACT <span>✦</span>
+
+          NODE.JS <span>✦</span>
+
+          TYPESCRIPT <span>✦</span>
+
+        </div>
+
+      </div>
+
+
+      {/* ==================================================
+          SOBRE
+      ================================================== */}
+
+      <section
+        className="section about"
+        id="about"
+      >
+
+        <div className="sectionLabel">
+
+          <span>01</span>
+
+          SOBRE MIM
+
+        </div>
+
+
+        <div className="aboutGrid">
+
+          <div>
+
+            <h2>
+
+              Código é só
+              <br />
+              a ferramenta.
+
+              <br />
+
+              <span>
+                Resolver é o objetivo.
+              </span>
+
+            </h2>
+
+          </div>
+
+
+          <div className="aboutText">
+
+            <p>
+              Sou{" "}
+              <strong>
+                Edwyn Wylly Horácio da Silva
+              </strong>
+              , desenvolvedor Full Stack e
+              profissional de TI.
+            </p>
+
+            <p>
+              Curso Análise e Desenvolvimento de
+              Sistemas e atuo profissionalmente com
+              tecnologia, desenvolvendo também
+              soluções para problemas reais
+              encontrados no ambiente empresarial.
+            </p>
+
+            <p>
+              Trabalho desde interfaces com React
+              e Next.js até APIs REST,
+              autenticação, bancos de dados,
+              armazenamento em nuvem e deploy.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div className="stats">
+
+          <div>
+
+            <strong>
+              FULL
+            </strong>
+
+            <span>
+              STACK
+            </span>
+
+            <p>
+              Frontend + Backend
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              REAL
+            </strong>
+
+            <span>
+              WORLD
+            </span>
+
+            <p>
+              Projetos empresariais
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              2026
+            </strong>
+
+            <span>
+              ADS
+            </span>
+
+            <p>
+              Formação
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <strong>
+              SP
+            </strong>
+
+            <span>
+              BRASIL
+            </span>
+
+            <p>
+              Remoto • Híbrido
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          PROJETOS
+      ================================================== */}
+
+      <section
+        className="section projects"
+        id="projects"
+      >
+
+        <div className="sectionLabel">
+
+          <span>
+            02
+          </span>
+
+          PROJETOS SELECIONADOS
+
+        </div>
+
+
+        <div className="projectsHeader">
+
+          <h2>
+
+            Projetos que saíram
+
+            <br />
+
+            <span>
+              do código para o mundo.
+            </span>
+
+          </h2>
+
+
+          <p>
+            Aplicações desenvolvidas para solucionar
+            problemas empresariais e desafios reais
+            de desenvolvimento.
+          </p>
+
+        </div>
+
+
+        {/* ==============================
+            LISTA DE PROJETOS
+        ============================== */}
+
+        <div className="projectList">
+
+          {projects.map((project) => (
+
+            <article
+              className="project"
+              key={project.number}
+            >
+
+              {/* NÚMERO */}
+
+              <div className="projectNumber">
+                {project.number}
+              </div>
+
+
+              {/* =========================
+                  PREVIEW
+              ========================= */}
+
+              <div className="projectVisual">
+
+                {project.image ? (
+
+                  <div className="projectBrowser">
+
+
+                    {/* BROWSER TOP */}
+
+                    <div className="projectBrowserTop">
+
+                      <div className="browserDots">
+                        <span />
+                        <span />
+                        <span />
+                      </div>
+
+
+                      <div className="browserAddress">
+
+                        {project.url
+                          ? project.url
+                              .replace("https://", "")
+                              .replace("/", "")
+                          : project.title
+                              .toLowerCase()
+                              .replaceAll(" ", "-")}
+
+                      </div>
+
+
+                      <span className="browserLive">
+                        LIVE
+                      </span>
+
+                    </div>
+
+
+                    {/* SCREENSHOT */}
+
+                    <div className="projectScreenshot">
+
+                      <Image
+                        src={project.image}
+                        alt={`Página inicial do ${project.title}`}
+                        fill
+                        priority={project.number === "01"}
+                        sizes="(max-width: 1000px) 100vw, 50vw"
+                      />
+
+
+                      <div className="screenshotOverlay" />
+
+
+                      {project.url && (
+
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="imageProjectLink"
+                          data-cursor="LAUNCH ↗"
+                          aria-label={`Abrir ${project.title}`}
+                        >
+
+                          <span>
+                            ABRIR PROJETO
+                          </span>
+
+                          <strong>
+                            ↗
+                          </strong>
+
+                        </a>
+
+                      )}
+
+                    </div>
+
+                  </div>
+
+                ) : (
+
+                  /* =========================
+                     EM DESENVOLVIMENTO
+                  ========================= */
+
+                  <div className="projectDevelopment">
+
+                    <div className="developmentGrid" />
+
+
+                    <div className="developmentContent">
+
+                      <span className="developmentNumber">
+                        {project.number}
+                      </span>
+
+
+                      <div className="developmentIcon">
+                        &lt;/&gt;
+                      </div>
+
+
+                      <strong>
+                        EM DESENVOLVIMENTO
+                      </strong>
+
+
+                      <p>
+                        BUILDING SOMETHING NEW_
+                      </p>
+
+
+                      <div className="developmentLine">
+                        <span />
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                )}
+
+              </div>
+
+
+              {/* =========================
+                  INFORMAÇÕES
+              ========================= */}
+
+              <div className="projectInfo">
+
+
+                <div className="projectMeta">
+
+                  <span className="projectCompany">
+                    {project.company}
+                  </span>
+
+
+                  {project.status === "online" ? (
+
+                    <span className="projectStatus online">
+
+                      <i />
+
+                      ONLINE
+
+                    </span>
+
+                  ) : (
+
+                    <span className="projectStatus development">
+
+                      <i />
+
+                      EM DESENVOLVIMENTO
+
+                    </span>
+
+                  )}
+
+                </div>
+
+
+                <h3>
+                  {project.title}
+                </h3>
+
+
+                <p>
+                  {project.description}
+                </p>
+
+
+                <div className="tags">
+
+                  {project.tags.map((tag) => (
+
+                    <span key={tag}>
+                      {tag}
+                    </span>
+
+                  ))}
+
+                </div>
+
+
+                {/* PROJETO ONLINE */}
+
+                {project.url ? (
+
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="projectVisit"
+                    data-cursor="LAUNCH ↗"
+                  >
+
+                    <div>
+
+                      <small>
+                        PROJETO PUBLICADO
+                      </small>
+
+                      <strong>
+                        Visitar aplicação
+                      </strong>
+
+                    </div>
+
+
+                    <span>
+                      ↗
+                    </span>
+
+                  </a>
+
+                ) : (
+
+                  /* PROJETO EM DESENVOLVIMENTO */
+
+                  <div className="projectComingSoon">
+
+                    <span>
+                      ◌
+                    </span>
+
+
+                    <div>
+
+                      <small>
+                        STATUS
+                      </small>
+
+                      <strong>
+                        Projeto em desenvolvimento
+                      </strong>
+
+                    </div>
+
+                  </div>
+
+                )}
+
+              </div>
+
+            </article>
+
+          ))}
+
+        </div>
+
+
+        {/* ==================================================
+            OUTROS PROJETOS
+        ================================================== */}
+
+        <div className="otherProjects">
+
+          <h3>
+            Outros projetos
+          </h3>
+
+
+          <div className="otherGrid">
+
+            {otherProjects.map((project) => (
+
+              <div
+                className="smallProject"
+                key={project.title}
+              >
+
+                <span>
+                  ↗
+                </span>
+
+                <h4>
+                  {project.title}
+                </h4>
+
+                <p>
+                  {project.stack}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          MANIFESTO / PROCESSO
+      ================================================== */}
+
+      <section className="manifesto">
+
+        <p>
+          EU NÃO DESENVOLVO
+        </p>
+
+
+        <h2>
+
+          APENAS
+
+          <br />
+
+          <span>
+            TELAS.
+          </span>
+
+        </h2>
+
+
+        <div className="process">
+
+
+          <div>
+
+            <span>
+              01
+            </span>
+
+            <h3>
+              Entendo.
+            </h3>
+
+            <p>
+              Analiso o problema e os processos
+              antes de escrever código.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              02
+            </span>
+
+            <h3>
+              Desenho.
+            </h3>
+
+            <p>
+              Transformo requisitos em uma solução
+              simples e escalável.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              03
+            </span>
+
+            <h3>
+              Desenvolvo.
+            </h3>
+
+            <p>
+              Frontend, backend, banco de dados
+              e integrações.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              04
+            </span>
+
+            <h3>
+              Entrego.
+            </h3>
+
+            <p>
+              Deploy, validação, correções e
+              evolução da aplicação.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          EXPERIÊNCIA
+      ================================================== */}
+
+      <section
+        className="section experience"
+        id="experience"
+      >
+
+        <div className="sectionLabel">
+
+          <span>
+            03
+          </span>
+
+          EXPERIÊNCIA
+
+        </div>
+
+
+        <div className="experienceGrid">
+
+
+          <h2>
+
+            Onde tecnologia
+
+            <br />
+
+            encontra{" "}
+
+            <span>
+              negócio.
+            </span>
+
+          </h2>
+
+
+          <div className="timeline">
+
+
+            {/* JCORTIÇA */}
+
+            <div className="timelineItem">
+
+              <div className="timelineDate">
+                ATUAL
+              </div>
+
+
+              <div>
+
+                <span>
+                  JCORTIÇA PAINÉIS ELÉTRICOS
+                </span>
+
+                <h3>
+                  Auxiliar de TI
+                </h3>
+
+                <p>
+                  Atuação em tecnologia e suporte,
+                  além do desenvolvimento de
+                  aplicações internas para
+                  organização de documentação,
+                  relatórios e melhoria de processos
+                  empresariais.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            {/* UNOESTE */}
+
+            <div className="timelineItem">
+
+              <div className="timelineDate">
+                2026
+              </div>
+
+
+              <div>
+
+                <span>
+                  UNOESTE
+                </span>
+
+                <h3>
+                  Análise e Desenvolvimento de Sistemas
+                </h3>
+
+                <p>
+                  Desenvolvimento web, APIs,
+                  banco de dados, arquitetura de
+                  software e engenharia de aplicações.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            {/* ETEC */}
+
+            <div className="timelineItem">
+
+              <div className="timelineDate">
+                2023
+              </div>
+
+
+              <div>
+
+                <span>
+                  ETEC PROF. MASSUYUKI KAWANO
+                </span>
+
+                <h3>
+                  Técnico em Administração
+                </h3>
+
+                <p>
+                  Formação que complementa tecnologia
+                  com conhecimento sobre processos,
+                  gestão e ambiente empresarial.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          STACK
+      ================================================== */}
+
+      <section
+        className="section stack"
+        id="stack"
+      >
+
+        <div className="sectionLabel">
+
+          <span>
+            04
+          </span>
+
+          TECNOLOGIAS
+
+        </div>
+
+
+        <h2>
+
+          Minha{" "}
+
+          <span>
+            stack.
+          </span>
+
+        </h2>
+
+
+        <div className="stackGrid">
+
+          {Object.entries(technologies).map(
+            ([category, items]) => (
+
+              <div
+                className="stackGroup"
+                key={category}
+              >
+
+                <span>
+                  {category}
+                </span>
+
+
+                {items.map((item) => (
+
+                  <div key={item}>
+                    {item}
+                  </div>
+
+                ))}
+
+              </div>
+
+            )
+          )}
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          CONTATO
+      ================================================== */}
+
+      <section
+        className="contact"
+        id="contact"
+      >
+
+        <p>
+          TEM UMA IDEIA, PROJETO OU OPORTUNIDADE?
+        </p>
+
+
+        <h2>
+
+          VAMOS CRIAR
+
+          <br />
+
+          ALGO{" "}
+
+          <span>
+            JUNTOS.
+          </span>
+
+        </h2>
+
+
+        <p className="contactText">
+
+          Estou aberto a oportunidades como
+          Desenvolvedor Júnior e a novos projetos
+          de desenvolvimento.
+
+        </p>
+
+
+        <div className="contactLinks">
+
+
+          <a
+            href="mailto:edwynws77@gmail.com"
+            data-cursor="MAIL ↗"
+          >
+            E-mail ↗
+          </a>
+
+
+          <a
+            href="https://github.com/EdwynWs"
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="CODE ↗"
+          >
+            GitHub ↗
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/edwyn-wylly-8754562b5/"
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="CONNECT ↗"
+          >
+            LinkedIn ↗
+          </a>
+
+
+        </div>
+
+      </section>
+
+
+      {/* ==================================================
+          FOOTER
+      ================================================== */}
+
+      <footer>
+
+        <a
+          href="#home"
+          className="logo"
+          data-cursor="TOP ↑"
+        >
+          &lt;EW<span>/</span>&gt;
+        </a>
+
+
+        <p>
+          Edwyn Wylly © 2026
+        </p>
+
+
+        <p>
+          Built with Next.js
+        </p>
+
+      </footer>
+
+    </main>
   );
 }
