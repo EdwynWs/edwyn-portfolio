@@ -42,25 +42,24 @@ const projects = [
 
   {
     number: "03",
-    title: "FIPPConsórcio",
-    company: "Projeto acadêmico",
+    title: "Feito a Mão",
+    company: "Feito a Mão",
 
     description:
-      "Sistema completo para gerenciamento de consórcios, participantes, cotas, pagamentos, assembleias e controle financeiro.",
+      "Site institucional desenvolvido para a Feito à Mão, destacando serviços de marcenaria, serralheria, restauração e projetos personalizados. O projeto valoriza o processo artesanal por meio de uma experiência visual moderna, interativa e responsiva, além de facilitar o contato para solicitação de orçamentos.",
 
-    tags: [
-      "Next.js",
-      "Node.js",
-      "MySQL",
-      "JWT",
-      "Socket.io",
-      "Swagger",
-    ],
+    tags: [ 
+    "Next.js", 
+    "React", 
+    "JavaScript", 
+    "CSS", 
+    "Responsive Design",
+  ],
 
-    image: null,
-    url: null,
+    image: "/feito-mao.png",
+    url: "https://feito-a-mao-one.vercel.app/",
 
-    status: "development",
+    status: "online",
   },
 ];
 
