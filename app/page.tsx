@@ -26,18 +26,18 @@ const projects = [
 
   {
     number: "02",
-    title: "Sistema de Relatórios",
-    company: "JCortiça",
+    title: "TF Soluções Avícolas",
+    company: "TF-Soluções Avícolas",
 
     description:
-      "Sistema desenvolvido para digitalizar e organizar processos internos de relatórios, reduzindo a dependência de controles manuais e centralizando informações.",
+      "Site desenvolvido para apresentar as soluções e equipamentos da TF Soluções Avícolas, valorizando seus produtos e facilitando o contato de clientes para solicitação de orçamentos.",
 
-    tags: ["Next.js", "Node.js", "PostgreSQL", "REST API"],
+    tags: ["Next.js", "React", "Css", "Vercel"],
 
-    image: null,
-    url: null,
+    image: '/homeTf.png',
+    url: 'https://tf-solucoes-avicolas.vercel.app/',
 
-    status: "development",
+    status: "online",
   },
 
   {
