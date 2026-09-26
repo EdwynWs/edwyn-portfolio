@@ -61,6 +61,32 @@ const projects = [
 
     status: "online",
   },
+
+
+    {
+    number: "04",
+    title: "Barbearia",
+    company: "BARBERSHOP",
+
+    description:
+  "Sistema de agendamento e gestão desenvolvido para a Barbershop Du Cortes. Permite aos clientes reservar horários, acompanhar agendamentos e receber confirmações por e-mail. Conta com painel administrativo para gerenciar serviços, agenda, pagamentos e despesas, além de dashboards e relatórios para acompanhar os resultados da barbearia, em uma interface responsiva.",
+
+  tags: [
+  "Next.js",
+  "React",
+  "JavaScript",
+  "Node.js",
+  "Express",
+  "PostgreSQL",
+  "CSS",
+  "Responsive Design",
+],
+
+    image: "/barbearia.png",
+    url: "https://barbershop-du-cortes.vercel.app/",
+
+    status: "online",
+  },
 ];
 
 const otherProjects = [
